@@ -18,9 +18,12 @@ recipient_email = input("Please enter the recipient's email address:")
 subject = "**NEW WORK EMAIL"
 
 # specify the time until the script should run
+stop_year = 2022
+stop_month = 1
+stop_day = 1
 stop_hour = 18
 stop_min = 21
-stop_sec = 30
+
 
 class Ice_Login:
 
@@ -155,7 +158,7 @@ if __name__ == "__main__":
         current_time = datetime.datetime.now()
         print(f"Last checked: {current_time.hour}:{current_time.minute}:{current_time.second}")
         
-        if current_time > datetime.datetime(year=2021, month=12, day=31, hour=12, minute=30):
+        if current_time > datetime.datetime(year=stop_year, month=stop_month, day=stop_day, hour=stop_hour, minute=stop_min):
             RUNNING = False
             print("Auto notifications script stopped running.")
         else:
